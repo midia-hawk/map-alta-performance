@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "map-cyan": "hsl(var(--map-cyan))",
+        "map-cyan-light": "hsl(var(--map-cyan-light))",
+        "map-purple": "hsl(var(--map-purple))",
+        "map-purple-dark": "hsl(var(--map-purple-dark))",
+        "map-dark": "hsl(var(--map-dark))",
+        "map-dark-light": "hsl(var(--map-dark-light))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

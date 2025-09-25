@@ -1,12 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/map/HeroSection";
+import ProblemsSection from "@/components/map/ProblemsSection";
+import MethodologySection from "@/components/map/MethodologySection";
+import TransformationSection from "@/components/map/TransformationSection";
+import AboutRicardoSection from "@/components/map/AboutRicardoSection";
+import EventDetailsSection from "@/components/map/EventDetailsSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection />
+      <ProblemsSection />
+      <MethodologySection />
+      <TransformationSection />
+      <AboutRicardoSection />
+      <EventDetailsSection />
     </div>
   );
 };
