@@ -114,44 +114,42 @@ const RegistrationForm = () => {
       </div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nome Completo</FormLabel>
-                  <FormControl>
-                    <Input 
-                      placeholder="Digite seu nome completo" 
-                      className="h-12 bg-background border-border focus:border-map-cyan"
-                      {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 max-w-lg mx-auto">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Nome Completo</FormLabel>
+                <FormControl>
+                  <Input 
+                    placeholder="Digite seu nome completo" 
+                    className="h-12 bg-background border-border focus:border-map-cyan"
+                    {...field} 
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Telefone com DDD</FormLabel>
-                  <FormControl>
-                    <Input 
-                      placeholder="(11) 99999-9999" 
-                      className="h-12 bg-background border-border focus:border-map-cyan"
-                      {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Telefone com DDD</FormLabel>
+                <FormControl>
+                  <Input 
+                    placeholder="(11) 99999-9999" 
+                    className="h-12 bg-background border-border focus:border-map-cyan"
+                    {...field} 
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           <FormField
             control={form.control}
@@ -172,64 +170,62 @@ const RegistrationForm = () => {
             )}
           />
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <FormField
-              control={form.control}
-              name="position"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Selecione seu cargo</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger className="h-12 bg-background border-border focus:border-map-cyan">
-                        <SelectValue placeholder="Selecione seu cargo" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent className="bg-background border-border">
-                      {positionOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <FormField
+            control={form.control}
+            name="position"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Selecione seu cargo</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger className="h-12 bg-background border-border focus:border-map-cyan">
+                      <SelectValue placeholder="Selecione seu cargo" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="bg-background border-border">
+                    {positionOptions.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-            <FormField
-              control={form.control}
-              name="employees"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Quantos funcionários?</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger className="h-12 bg-background border-border focus:border-map-cyan">
-                        <SelectValue placeholder="Quantos funcionários?" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent className="bg-background border-border">
-                      {employeeOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+          <FormField
+            control={form.control}
+            name="employees"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Quantos funcionários?</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger className="h-12 bg-background border-border focus:border-map-cyan">
+                      <SelectValue placeholder="Quantos funcionários?" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="bg-background border-border">
+                    {employeeOptions.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           <div className="text-center pt-6">
             <Button 
               type="submit" 
               variant="cta" 
               size="xl" 
-              className="text-xl w-full md:w-auto"
+              className="text-xl w-full"
               disabled={isLoading}
             >
               {isLoading ? "ENVIANDO..." : "QUERO GARANTIR MINHA VAGA AGORA"}
