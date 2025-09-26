@@ -1,6 +1,6 @@
 import { Section } from "@/components/ui/section";
-import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Users, Star, Shield } from "lucide-react";
+import RegistrationForm from "./RegistrationForm";
 
 const EventDetailsSection = () => {
   const details = [
@@ -103,27 +103,8 @@ const EventDetailsSection = () => {
           </div>
         </div>
         
-        {/* CTA Final */}
-        <div className="text-center">
-          <div className="bg-gradient-hero p-8 lg:p-12 rounded-2xl border border-map-cyan/20">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-              Transforme sua empresa em <span className="text-gradient">2 dias</span>
-            </h3>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Não perca essa oportunidade única de aprender com quem realmente sabe construir 
-              e escalar negócios de sucesso. As vagas são limitadas!
-            </p>
-            
-            <div className="space-y-4">
-              <Button variant="cta" size="xl" className="text-xl">
-                QUERO GARANTIR MINHA VAGA AGORA
-              </Button>
-              <p className="text-sm text-muted-foreground">
-                ⚡ Vagas limitadas • 📍 Uberlândia-MG • 📅 08 e 09 de Outubro
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* Registration Form */}
+        <RegistrationForm />
       </div>
     </Section>
   );

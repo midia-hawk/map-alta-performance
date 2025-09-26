@@ -46,7 +46,12 @@ const HeroSection = () => {
             </div>
             
             <div className="pt-4">
-              <Button variant="cta" size="xl" className="text-xl">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="text-xl"
+                onClick={() => document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 QUERO ESCALAR MEU NEGÓCIO
               </Button>
             </div>
