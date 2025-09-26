@@ -44,13 +44,35 @@ const RegistrationForm = () => {
     };
   };
 
+  const formatPhone = (value: string) => {
+    // Remove tudo que não for número
+    const numbers = value.replace(/\D/g, '');
+    
+    // Aplica a máscara (11) 99999-9999
+    if (numbers.length <= 2) {
+      return numbers;
+    } else if (numbers.length <= 7) {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+    } else {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+    }
+  };
+
+  const handlePhoneChange = (value: string) => {
+    const formattedValue = formatPhone(value);
+    form.setValue('phone', formattedValue);
+  };
+
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
     
     try {
       const utmParams = getUtmParams();
+      // Remove a formatação do telefone antes de enviar
+      const cleanPhone = data.phone.replace(/\D/g, '');
       const payload = {
         ...data,
+        phone: cleanPhone,
         ...utmParams,
         timestamp: new Date().toISOString(),
         source: "imersao-map-landing",
@@ -143,7 +165,9 @@ const RegistrationForm = () => {
                   <Input 
                     placeholder="(11) 99999-9999" 
                     className="h-12 bg-background border-border focus:border-map-cyan"
-                    {...field} 
+                    value={field.value}
+                    onChange={(e) => handlePhoneChange(e.target.value)}
+                    maxLength={15}
                   />
                 </FormControl>
                 <FormMessage />
