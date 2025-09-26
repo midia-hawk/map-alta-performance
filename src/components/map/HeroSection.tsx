@@ -10,16 +10,16 @@ const HeroSection = () => {
       <div className="absolute top-20 right-20 w-96 h-96 bg-map-cyan/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-map-purple/10 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
             <div className="space-y-4">
-              <p className="text-map-cyan font-semibold text-lg tracking-wide uppercase">
+              <p className="text-map-cyan font-semibold text-base sm:text-lg tracking-wide uppercase">
                 Para Donos de Empresas que Desejam Escalar seus Negócios
               </p>
               
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="text-gradient">METODOLOGIA</span>
                 <br />
                 <span className="text-foreground">DE ALTA</span>
@@ -30,26 +30,26 @@ const HeroSection = () => {
               <div className="w-20 h-1 bg-gradient-primary rounded-full" />
             </div>
             
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
               Trabalhe com <strong className="text-map-cyan">eficiência</strong> e aumente seu <strong className="text-map-cyan">lucro</strong> em 2 dias de imersão prática e intensiva.
             </p>
             
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 text-lg">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center justify-center lg:justify-start gap-4 text-base sm:text-lg">
                 <div className="w-3 h-3 bg-map-cyan rounded-full" />
                 <span className="font-semibold">08 e 09 de Outubro</span>
               </div>
-              <div className="flex items-center gap-4 text-lg">
+              <div className="flex items-center justify-center lg:justify-start gap-4 text-base sm:text-lg">
                 <div className="w-3 h-3 bg-map-purple rounded-full" />
                 <span className="font-semibold">Uberlândia - MG</span>
               </div>
             </div>
             
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center lg:justify-start">
               <Button 
                 variant="cta" 
                 size="xl" 
-                className="text-xl"
+                className="text-lg sm:text-xl w-full sm:w-auto"
                 onClick={() => document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 QUERO ESCALAR MEU NEGÓCIO
@@ -58,17 +58,17 @@ const HeroSection = () => {
           </div>
           
           {/* Right Content - Ricardo Rocha Image */}
-          <div className="relative">
+          <div className="relative order-first lg:order-last">
             <div className="relative">
               <img 
                 src={ricardoRochaImage} 
                 alt="Ricardo Rocha - Criador da Metodologia MAP" 
-                className="w-full max-w-md mx-auto rounded-2xl shadow-purple"
+                className="w-full max-w-sm sm:max-w-md mx-auto rounded-2xl shadow-purple"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-primary p-6 rounded-2xl shadow-glow">
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-6 sm:-right-6 bg-gradient-primary p-4 sm:p-6 rounded-2xl shadow-glow">
                 <div className="text-map-dark font-bold">
-                  <div className="text-sm">Criador da</div>
-                  <div className="text-xl">Metodologia MAP</div>
+                  <div className="text-xs sm:text-sm">Criador da</div>
+                  <div className="text-lg sm:text-xl">Metodologia MAP</div>
                 </div>
               </div>
             </div>

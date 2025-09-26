@@ -41,18 +41,18 @@ const AboutRicardoSection = () => {
       <div className="absolute top-1/4 left-0 w-80 h-80 bg-map-purple/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-map-cyan/10 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
             Aprenda com quem <span className="text-gradient">realmente sabe</span> construir negócios de sucesso
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Ricardo Rocha não é apenas um palestrante. É um empresário que vivenciou na prática 
             tudo o que ensina na Imersão MAP.
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16">
           {/* Image */}
           <div className="order-2 lg:order-1">
             <div className="relative">
@@ -61,22 +61,22 @@ const AboutRicardoSection = () => {
                 alt="Ricardo Rocha palestrando" 
                 className="w-full rounded-2xl shadow-purple"
               />
-              <div className="absolute -top-6 -left-6 bg-gradient-primary p-6 rounded-2xl shadow-glow">
+              <div className="absolute -top-3 -left-3 sm:-top-6 sm:-left-6 bg-gradient-primary p-4 sm:p-6 rounded-2xl shadow-glow">
                 <div className="text-map-dark font-bold">
-                  <div className="text-lg">Ricardo Rocha</div>
-                  <div className="text-sm">Criador da MAP</div>
+                  <div className="text-base sm:text-lg">Ricardo Rocha</div>
+                  <div className="text-xs sm:text-sm">Criador da MAP</div>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Content */}
-          <div className="order-1 lg:order-2 space-y-8">
+          <div className="order-1 lg:order-2 space-y-6 sm:space-y-8 text-center lg:text-left">
             <div>
-              <h3 className="text-3xl font-bold mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
                 <span className="text-gradient">Quem é</span> Ricardo Rocha?
               </h3>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
                 <p>
                   <strong className="text-foreground">Ex-executivo do Magazine Luiza</strong>, Ricardo Rocha é um empreendedor serial que construiu e vendeu 12 empresas de sucesso ao longo de sua carreira.
                 </p>
@@ -103,7 +103,7 @@ const AboutRicardoSection = () => {
         </div>
         
         {/* Achievements Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((achievement, index) => (
             <div key={index} className="group">
               <div className="bg-card border border-border rounded-xl p-6 text-center transition-smooth hover:border-map-cyan/50 hover:shadow-glow/20 hover:-translate-y-2">
@@ -121,11 +121,11 @@ const AboutRicardoSection = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-gradient-primary p-8 lg:p-12 rounded-2xl text-center">
-          <h3 className="text-3xl font-bold text-map-dark mb-4">
+        <div className="mt-12 sm:mt-16 bg-gradient-primary p-6 sm:p-8 lg:p-12 rounded-2xl text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-map-dark mb-4">
             Já impactou mais de 500 empresários diretamente
           </h3>
-          <p className="text-xl text-map-dark/80">
+          <p className="text-lg sm:text-xl text-map-dark/80">
             Reconhecido por ensinar na prática como transformar negócios, sem teorias vazias.
           </p>
         </div>
