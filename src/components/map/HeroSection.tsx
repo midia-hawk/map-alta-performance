@@ -10,12 +10,12 @@ const HeroSection = () => {
       <div className="absolute top-20 right-20 w-96 h-96 bg-map-cyan/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-map-purple/10 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 lg:space-y-8 text-center lg:text-left px-4 sm:px-0">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
             <div className="space-y-4">
-              <p className="text-map-cyan font-semibold text-sm sm:text-base lg:text-lg tracking-wide uppercase">
+              <p className="text-map-cyan font-semibold text-base sm:text-lg tracking-wide uppercase">
                 Para Donos de Empresas que Desejam Escalar seus Negócios
               </p>
               
