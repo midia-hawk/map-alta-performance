@@ -79,14 +79,24 @@ const RegistrationForm = () => {
         page_url: window.location.href,
       };
 
-      const response = await fetch("https://n8n-n8n-start.t4r0vc.easypanel.host/webhook/6ecbce42-7ff3-4099-9f5b-37fa35af5945", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify(payload),
-      });
+      // Enviar para ambos os webhooks simultaneamente
+      const webhookUrls = [
+        "https://n8n-n8n-start.t4r0vc.easypanel.host/webhook/6ecbce42-7ff3-4099-9f5b-37fa35af5945",
+        "https://hook.us1.make.com/3fshqtwrm35b7bbq3pcnobnwoxjz2mqj"
+      ];
+
+      const requests = webhookUrls.map(url => 
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+          body: JSON.stringify(payload),
+        })
+      );
+
+      await Promise.all(requests);
 
       toast({
         title: "Inscrição enviada com sucesso!",
@@ -116,11 +126,11 @@ const RegistrationForm = () => {
   ];
 
   const employeeOptions = [
-    { value: "1-5", label: "1 a 5" },
-    { value: "6-10", label: "6 a 10" },
-    { value: "11-20", label: "11 a 20" },
-    { value: "21-40", label: "21 a 40" },
-    { value: "41-100", label: "41 a 100" },
+    { value: "1 a 5", label: "1 a 5" },
+    { value: "6 a 10", label: "6 a 10" },
+    { value: "11 a 20", label: "11 a 20" },
+    { value: "21 a 40", label: "21 a 40" },
+    { value: "41 a 100", label: "41 a 100" },
     { value: "100+", label: "100+" },
   ];
 
