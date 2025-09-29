@@ -8,12 +8,22 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Detecta se está em produção (GitHub Pages) ou desenvolvimento
+const getBasename = () => {
+  // Se estiver em produção (build) e a URL contém o nome do repositório
+  if (import.meta.env.PROD && window.location.pathname.includes('/map-alta-performance')) {
+    return '/map-alta-performance';
+  }
+  // Em desenvolvimento, sem basename
+  return '';
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/map-alta-performance">
+      <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
