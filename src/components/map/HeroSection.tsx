@@ -10,16 +10,16 @@ const HeroSection = () => {
       <div className="absolute top-20 right-20 w-96 h-96 bg-map-cyan/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-map-purple/10 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
-            <div className="space-y-4">
-              <p className="text-map-cyan font-semibold text-base sm:text-lg tracking-wide uppercase">
+          <div className="space-y-4 lg:space-y-8 text-center lg:text-left px-2 sm:px-0">
+            <div className="space-y-3">
+              <p className="text-map-cyan font-semibold text-sm sm:text-base lg:text-lg tracking-wide uppercase">
                 Para Donos de Empresas que Desejam Escalar seus Negócios
               </p>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 <span className="text-gradient">METODOLOGIA</span>
                 <br />
                 <span className="text-foreground">DE ALTA</span>
@@ -27,10 +27,10 @@ const HeroSection = () => {
                 <span className="text-foreground">PERFORMANCE</span>
               </h1>
               
-              <div className="w-20 h-1 bg-gradient-primary rounded-full" />
+              <div className="w-16 sm:w-20 h-1 bg-gradient-primary rounded-full mx-auto lg:mx-0" />
             </div>
             
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-sm sm:max-w-lg mx-auto lg:mx-0">
               Trabalhe com <strong className="text-map-cyan">eficiência</strong> e aumente seu <strong className="text-map-cyan">lucro</strong> em 2 dias de imersão prática e intensiva.
             </p>
             
