@@ -249,7 +249,7 @@ const RegistrationForm = () => {
               type="submit" 
               variant="cta" 
               size="xl" 
-              className="text-xl w-full"
+              className="text-sm sm:text-base lg:text-xl w-full"
               disabled={isLoading}
             >
               {isLoading ? "ENVIANDO..." : "QUERO GARANTIR MINHA VAGA AGORA"}

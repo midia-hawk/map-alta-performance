@@ -58,12 +58,12 @@ const HeroSection = () => {
           </div>
           
           {/* Right Content - Ricardo Rocha Image */}
-          <div className="relative order-first lg:order-last">
+          <div className="relative order-first lg:order-last px-4 sm:px-0">
             <div className="relative">
               <img 
                 src={ricardoRochaImage} 
                 alt="Ricardo Rocha - Criador da Metodologia MAP" 
-                className="w-full max-w-sm sm:max-w-md mx-auto rounded-2xl shadow-purple"
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-purple"
               />
               <div className="absolute -bottom-3 -right-3 sm:-bottom-6 sm:-right-6 bg-gradient-primary p-4 sm:p-6 rounded-2xl shadow-glow">
                 <div className="text-map-dark font-bold">
