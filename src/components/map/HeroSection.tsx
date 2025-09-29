@@ -65,7 +65,7 @@ const HeroSection = () => {
                 alt="Ricardo Rocha - Criador da Metodologia MAP" 
                 className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-purple"
               />
-              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 sm:-bottom-6 bg-gradient-primary p-4 sm:p-6 rounded-2xl shadow-glow">
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-6 sm:-right-6 bg-gradient-primary p-4 sm:p-6 rounded-2xl shadow-glow">
                 <div className="text-map-dark font-bold">
                   <div className="text-xs sm:text-sm">Criador da</div>
                   <div className="text-lg sm:text-xl">Metodologia MAP</div>
