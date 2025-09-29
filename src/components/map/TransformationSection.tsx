@@ -47,9 +47,9 @@ const TransformationSection = () => {
                 </div>
                 
                 {/* Arrow */}
-                <div className="lg:col-span-1 justify-center order-last lg:order-none hidden lg:flex">
+                <div className="lg:col-span-1 flex justify-center order-last lg:order-none">
                   <div className="bg-gradient-primary p-3 sm:p-4 rounded-full shadow-glow">
-                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-map-dark" />
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-map-dark transform rotate-90 lg:rotate-0" />
                   </div>
                 </div>
                 
